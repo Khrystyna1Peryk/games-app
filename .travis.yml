@@ -1,0 +1,17 @@
+language: node_js;
+node_js:
+- '10'
+
+before_install:
+- npm install -g @angular/cli
+install: npm install
+
+branches:
+  only:
+  - main
+  
+deploy:
+  provider: heroku
+  app: games-app-on-angular
+  api_key:
+    secure: "750dbeda-2e0f-41dc-8bde-e0f81171630e"
